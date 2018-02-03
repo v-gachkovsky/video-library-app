@@ -1,0 +1,222 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: normal;
+    background-image: url(../img/backgroundLight.jpg);
+}
+
+header > *, main > * {
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.65);
+}
+
+nav *{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: 203px;
+}
+
+nav > ul li {
+    line-height: 40px;
+    list-style: none;
+    border-right: solid black 1px;
+}
+
+#name {
+    padding: 0 10px;
+    margin-left: -0.15px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 10px;
+    color: black;
+}
+
+nav > ul > li:first-child {
+    border-left: solid rgb(0, 0, 0) 1px;
+}
+
+nav a:hover {
+    background-color: #104E8B;
+    color: white;
+}
+
+#name {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    line-height: 40px;
+    border-right: 1px solid black;
+}
+
+.buttons {
+    border-right: 1px solid black;
+    position: absolute;
+    top: 0;
+    line-height: 40px;
+}
+
+#settings {
+    right: 32.5px;
+}
+
+#exit {
+    right: 0px;
+}
+/************** Sub menu ****************/
+
+nav li ul {
+    position: absolute;
+    border: solid rgb(0, 0, 0) 1px;
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); 
+    display: none;
+}
+
+#ourResources ul {
+    right: -7px;
+}
+
+nav li > ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.76);
+    margin: 0px;
+    padding: 0px;
+    height: 30px;
+    line-height: 30px;
+    font-size: small;
+    margin: -0.15px;
+}
+
+nav li ul > a {
+    padding: 0 5px;
+}
+
+nav > ul li:hover ul {
+    display: block;
+    margin-top: 0px;
+}
+
+nav [type="checkbox"],
+label.toggleSubmenu {
+    display: none;
+}
+
+nav label.toggleMenu {
+    background-color: gray;
+    display: none;
+    line-height: 40px;
+    padding-left: 35px;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+nav label.toggleMenu .fa {
+    position: absolute;
+    left: 12px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/*********Adaptive menu**************/
+
+@media all and (max-width: 800px) {
+
+    nav > ul > li:first-child {
+        border-left: none;
+    }
+
+    nav > ul li:hover ul {
+        display: none;
+    }
+    
+    nav label.toggleMenu {
+        display: block;
+    }
+
+    nav {
+        overflow: hidden
+    }
+
+    nav ul {
+        display: none;
+        right: 0;
+    }
+
+    #ourResources ul {
+        right: 0;
+    }
+
+    nav > ul li {
+        position: relative;
+        border: 1px solid black;
+    }
+
+    input.toggleMenu:checked + label.toggleMenu {
+        background-color: black;
+        color: white;
+    }
+
+    input.toggleMenu:checked ~ ul,
+    input.toggleSubmenu:checked ~ ul {
+        display: block;
+        position: relative;
+    }
+
+    input.toggleMenu:checked ~ p a,
+    input.toggleMenu:checked ~ p {
+        background-color: black;
+        color: white;
+    }
+
+    nav p a:hover {
+        background-color: gray;
+    }
+
+    nav label.toggleSubmenu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: block;
+    }
+
+    input.toggleSubmenu:checked ~ a {
+        background-color: black;
+        color: white;
+    }
+
+    nav label.toggleSubmenu .fa:before {
+        content: "\f0d7";
+        color: black;
+    }
+
+    nav label.toggleSubmenu .fa {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    nav input.toggleSubmenu:checked ~ label.toggleSubmenu .fa:before {
+        content: "\f0d8";
+        color: white;
+    }
+}

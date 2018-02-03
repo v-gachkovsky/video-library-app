@@ -1,0 +1,37 @@
+main {
+    position: relative;
+    margin: 15px auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.videos {
+    flex-basis: 300px;
+    width: 300px;
+    height: 169px;
+    background-color: black;
+    margin: 15px 10px;
+}
+
+#mainBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+
+#blockForAllVideos {
+    width: 800px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.5);
+}

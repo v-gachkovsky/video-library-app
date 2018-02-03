@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/nav.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/videos.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/slider.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/fontawesome-all.css">
+</head>
+<body>
+    <header>
+
+        <nav>
+            <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+            <label for="menu" class="toggleMenu"><i class="fa fa-bars"></i>Меню</label>
+            <ul>
+                <li id="curses">
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
+                    <a href="#">Мои курсы</a>
+                    <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li><a href="#">ПК Ритейл</a></li>
+                        <li><a href="#">Тренировка с В. Кондрук</a></li>
+                        <li><a href="#">Работа Васыфа</a></li>
+                        <li><a href="#">ПК Маркетинг и производство</a></li>
+                        <li><a href="#">ПК Коммерция</a></li>
+                        <li><a href="#">Курс "Управление финансами"</a></li>
+                    </ul>
+                </li>
+                <li id="ourResources">
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
+                    <a href="#">Наши ресурсы</a>
+                    <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li><a href="#">Интернет Магазин</a></li>
+                        <li><a href="#">Домашний сайт</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <p id="name">Имя Фамилия</p>
+            <p class="buttons" id="settings"><a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a></p>
+            <p class="buttons" id="exit"><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></p>
+        </nav>
+
+        <div id="slider">
+            <div id="slides"></div>
+            
+            <div id="prev"><img src="img/arrowL.png" alt=""></div>
+            <div id="next"><img src="img/arrowR.png" alt=""></div>
+
+            <div id="dots" style="text-align:center"></div>
+        </div>
+
+    </header>
+
+    <main>
+        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+    </main>
+    
+    <div id="mainBlock">
+        <div id="blockForAllVideos"></div>
+    </div>
+    <script src="./scripts/carousel.js"></script>
+    <script src="./scripts/video-library.js"></script>
+</body>
+</html>
