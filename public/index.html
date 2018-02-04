@@ -4,10 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page Title</title>
+
+    <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
     <link rel="stylesheet" type="text/css" media="screen" href="./styles/nav.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="./styles/videos.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="./styles/slider.css"/>
-    <link rel="stylesheet" type="text/css" href="styles/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="./styles/fontawesome-all.css">
 </head>
 <body>
     <header>
@@ -55,16 +59,29 @@
 
     </header>
 
-    <main>
-        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
-        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
-        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
-        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
-        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
-        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
-        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
-        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
-        <!--<div class="videos"><iframe width="300" height="169" src="https://www.youtube.com/embed/GL_5Z0HHTnk?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+    <main id="video-library">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <iframe
+                          id="iframeYoutube"
+                          width="800"
+                          height="450"
+                          src="https://www.youtube.com/embed/e80BbX05D7Y"
+                          frameborder="0"
+                          allowfullscreen
+                        >
+                        </iframe>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     
     <div id="mainBlock">
@@ -72,5 +89,6 @@
     </div>
     <script src="./scripts/carousel.js"></script>
     <script src="./scripts/video-library.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
