@@ -1,5 +1,7 @@
 (function () {
   const slides = [];
+  const dots = [];
+
   const sliderField = document.getElementById("slider");
   const duration = 4000;
   const firstSlideIndex = 0;
@@ -37,6 +39,7 @@
         showSlide(index);
       };
       dotsField.appendChild(dot);
+      dots.push(dot);
     });
 
     // Show first slide immediately
@@ -57,13 +60,20 @@
     })
   }
 
-// Show next slide
+  // Show next slide
   function showSlide(index) {
     const slidesField = document.getElementById('slides');
     const slide = slides[index];
 
     slidesField.innerHTML = '';
     slidesField.appendChild(slide);
+
+    // dot highlight
+    dots.forEach(dot => {
+      dot.className = 'dot';
+    });
+
+    dots[index].className = 'dot activeDot';
   }
 
   function getNextIndex() {
