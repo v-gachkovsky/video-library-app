@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Title</title>
+    <title>Video Library</title>
 
     <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
-    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
     <link href="./styles/bootstrap.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="./styles/nav.css"/>
@@ -25,14 +24,7 @@
                     <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
                     <a href="#">Мои курсы</a>
                     <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
-                    <ul>
-                        <li><a href="#">ПК Ритейл</a></li>
-                        <li><a href="#">Тренировка с В. Кондрук</a></li>
-                        <li><a href="#">Работа Васыфа</a></li>
-                        <li><a href="#">ПК Маркетинг и производство</a></li>
-                        <li><a href="#">ПК Коммерция</a></li>
-                        <li><a href="#">Курс "Управление финансами"</a></li>
-                    </ul>
+                    <ul id="menu-courses"></ul>
                 </li>
                 <li id="ourResources">
                     <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
@@ -51,7 +43,7 @@
 
         <div id="slider">
             <div id="slides"></div>
-            
+
             <div id="prev"><img src="img/arrowL.png" alt=""></div>
             <div id="next"><img src="img/arrowR.png" alt=""></div>
 
@@ -84,10 +76,11 @@
             </div>
         </div>
     </main>
-    
+
     <div id="mainBlock">
-        <div id="blockForAllVideos"></div>
+        <div id="video-library-content"></div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
     <script src="./scripts/carousel.js"></script>
     <script src="./scripts/video-library.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
