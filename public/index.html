@@ -52,34 +52,31 @@
 
     </header>
 
-    <main id="video-library">
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
+    <main id="video-library"></main>
 
-                        <iframe
-                          id="iframeYoutube"
-                          width="800"
-                          height="450"
-                          src="#"
-                          frameborder="0"
-                          allowfullscreen
-                        >
-                        </iframe>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                    </div>
+                    <iframe
+                        id="iframeYoutube"
+                        width="800"
+                        height="450"
+                        src="#"
+                        frameborder="0"
+                        allowfullscreen
+                    >
+                    </iframe>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
                 </div>
             </div>
         </div>
-    </main>
-
-    <div id="mainBlock">
-        <div id="video-library-content"></div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
     <script src="./scripts/carousel.js"></script>
     <script src="./scripts/video-library.js"></script>

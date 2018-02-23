@@ -4,25 +4,26 @@
   const videoLibraryURL = `${API}/videos`;
   const coursesURL = `${API}/courses`;
 
+  const IFRAME_WIDTH = 800;
+  const IFRAME_HEIGHT = 450;
+
   let library = [];
 
   function getCourses() {
-    return axios.get(coursesURL)
+    return axios.get(coursesURL);
   }
 
   function getVideos(courseId) {
-    return axios.get(`${videoLibraryURL}/${courseId}`)
+    return axios.get(`${videoLibraryURL}/${courseId}`);
   }
 
-  function openVideos(courseId) {
-
-
+  function loadVideos(courseId) {
     getVideos(courseId).then(response => {
-      library = response.data.videos
+      library = response.data.videos;
 
-      videoLibraryContainer.innerHTML = ''
-      makeVideosThumbnails()
-    })
+      videoLibraryContainer.innerHTML = '';
+      makeVideosThumbnails();
+    });
   }
 
   function init() {
@@ -30,22 +31,21 @@
       $("#myModal").on("hidden.bs.modal", () => {
         $("#iframeYoutube").attr("src","#");
       });
-
-      getCourses().then(({ data: courses }) => {
-        courses.forEach(course => {
-          const menuCourses = document.getElementById('menu-courses')
-          const menuItem = document.createElement('li')
-          const link = document.createElement('a')
-          link.href='#'
-          link.innerText = course.title
-
-          menuItem.appendChild(link)
-          menuCourses.appendChild(menuItem)
-          menuItem.addEventListener('click', openVideos.bind(null, course.id))
-        })
-      })
     });
 
+    getCourses().then(({ data: courses }) => {
+      courses.forEach(course => {
+        const menuCourses = document.getElementById('menu-courses');
+        const menuItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.href='#';
+        link.innerText = course.title;
+
+        menuItem.appendChild(link);
+        menuCourses.appendChild(menuItem);
+        menuItem.addEventListener('click', loadVideos.bind(null, course.id));
+      });
+    });
   }
 
   function makeVideosThumbnails() {
@@ -68,10 +68,10 @@
     });
   }
 
-  function showVideo(videoId) {
+  function showVideo(videoCode) {
     const iframe = document.getElementById('iframeYoutube');
 
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    iframe.src = `https://www.youtube.com/embed/${videoCode}?autoplay=1`;
 
     $("#myModal").modal("show");
   }
