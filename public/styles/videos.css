@@ -7,47 +7,43 @@ main {
     justify-content: space-between;
 }
 
-.videos {
-    flex-basis: 300px;
-    width: 300px;
-    height: 169px;
-    background-color: black;
-    margin: 15px 10px;
-}
-
-#mainBlock {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-
-}
-
-#blockForAllVideos {
-    width: 800px;
-    height: 450px;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
 .thumbnail-video-container {
     width: 320px;
-    box-shadow: none;
     cursor: pointer;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.65);
+    margin: 7px;
+    height: 270px;
+    background-color: rgb(224, 220, 182);
+    border: outset 2px gray;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .thumbnail-video-title {
-    background: #76B4E5;
     padding: 5px;
-    text-overflow: ellipsis;
+    font-weight: normal;
+    margin-top: -4px;
+    line-height: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.thumbnail-video-button {
+    position: absolute;
+    top: 55px;
+    background-image: url(../img/play1.png);
+    height: 54px;
+    width: 77px;  
 }
 
 .modal-dialog {
     width: 840px;
+}
+
+@media all and (max-width: 1046px) {
+    main {
+        justify-content: space-around;
+    }
 }

@@ -57,12 +57,16 @@
       thumbnailTitle.className = 'thumbnail-video-title';
       thumbnailTitle.innerHTML = video.title;
 
+      const thumbnailButton = document.createElement('div');
+      thumbnailButton.className = 'thumbnail-video-button';
+
       const thumbnailContainer = document.createElement('div');
       thumbnailContainer.className = 'thumbnail-video-container';
       thumbnailContainer.addEventListener('click', showVideo.bind(null, video.videoCode));
 
       thumbnailContainer.appendChild(thumbnail);
       thumbnailContainer.appendChild(thumbnailTitle);
+      thumbnailContainer.appendChild(thumbnailButton);
 
       videoLibraryContainer.appendChild(thumbnailContainer);
     });
