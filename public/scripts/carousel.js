@@ -16,11 +16,11 @@
 // Initial code for slider
   function init() {
     [
-      'img/train.jpg',
-      'img/lake.jpg',
-      'img/winter.jpg',
-      'img/dark.jpg',
-      'img/sold.jpg'
+      'img/gepanaze.jpg',
+      'img/immun44.jpg',
+      'img/gelometrol.jpg',
+      'img/sitoprostat.jpg',
+      'img/venoda.jpg'
     ].forEach(function (imageSrc) {
       const img = document.createElement('img');
       img.src = imageSrc;
