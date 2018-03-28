@@ -1,4 +1,6 @@
 (function () {
+  restoreSession();
+
   const videoLibraryContainer = document.getElementById('video-library');
   const API = 'http://localhost:9000/api';
   const videoLibraryURL = `${API}/videos`;
