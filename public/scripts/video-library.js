@@ -6,9 +6,6 @@
   const videoLibraryURL = `${API}/videos`;
   const coursesURL = `${API}/courses`;
 
-  const IFRAME_WIDTH = 800;
-  const IFRAME_HEIGHT = 450;
-
   let library = [];
 
   function getCourses() {
@@ -35,7 +32,7 @@
       });
     });
 
-    getCourses().then(({ data: courses }) => {
+    getCourses().then(({ data: { courses } }) => {
       courses.forEach(course => {
         const menuCourses = document.getElementById('menu-courses');
         const menuItem = document.createElement('li');
