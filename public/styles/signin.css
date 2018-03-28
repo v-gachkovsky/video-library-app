@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.body {
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+}
+
+#signin {
+    background-color: gray;
+    height: 350px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form * {
+    text-align: center;
+    margin: 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+#user-email, #user-password {
+    width: 230px;
+    height: 25px;
+    font-size: 0.8em;
+}

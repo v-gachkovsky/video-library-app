@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In Page</title>
+</head>
+<body>
+    <h1>
+        Sign In
+    </h1>
+
+    <form>
+        <div>
+            <p>
+                Имя
+                <input id="user-firstName" type="text">
+            </p>
+        </div>
+        <div>
+            <p>
+                Фамилия
+                <input id="user-lastName" type="text">
+            </p>
+        </div>
+        <div>
+            <p>
+                E-mail
+                <input id="user-email" type="text">
+            </p>
+        </div>
+        <div>
+            <p>
+                Пароль
+                <input id="user-password" type="password">
+            </p>
+        </div>
+        <input id="submit-button" type="submit">
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/signup.js"></script>
+</body>
+</html>

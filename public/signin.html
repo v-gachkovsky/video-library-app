@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign In Page</title>
+    <link rel="stylesheet" href="styles/signin.css">
 </head>
 <body>
-    <h1>
-        Sign In
-    </h1>
+    <div class="body">
+    <div id="signin">
+        <h1>
+            Авторизация
+        </h1>
 
-    <form>
-        <div>
-            <p>
-                E-mail
-                <input id="user-email" type="text">
-            </p>
-        </div>
-        <div>
-            <p>
-                Пароль
-                <input id="user-password" type="password">
-            </p>
-        </div>
-        <input id="submit-button" type="submit">
-    </form>
-
+        <form>
+            <div>
+                <p>
+                    <input id="user-email" type="text" autocomplete="on" placeholder="E-mail">
+                </p>
+            </div>
+            <div>
+                <p>
+                    <input id="user-password" type="password" autocomplete="on" placeholder="Пароль">
+                </p>
+            </div>
+            <input id="submit-button" type="submit">
+        </form>
+        <a href="signup.html">Регистрация</a>
+    </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
     <script src="scripts/auth.js"></script>
     <script src="scripts/signin.js"></script>
