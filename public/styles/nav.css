@@ -1,7 +1,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: normal;
-    background-image: url(../img/dark-breek.jpg);
+    background-image: url(../img/light-1.jpg);
 }
 
 header > *, main > * {
@@ -16,29 +16,36 @@ nav *{
 nav {
     width: 99.8%;
     background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
-    margin-bottom: 20px;
     font-weight: bold;
     position: relative;
     z-index: 1;
     margin: 15px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo-block {
+    position: absolute;
+    left: 20px;
+    height: 80px;
+    top: -20px;
+}
+
+.logo-block img {
+    line-height: 40px;
+    height: 100%;
 }
 
 nav > ul {
     display: flex;
     justify-content: flex-end;
     position: relative;
-    right: 203px;
 }
 
 nav > ul li {
     line-height: 40px;
     list-style: none;
     border-right: solid black 1px;
-}
-
-#name {
-    padding: 0 10px;
-    margin-left: -0.15px;
 }
 
 nav a {
@@ -59,27 +66,16 @@ nav a:hover {
 }
 
 #user-name {
-    position: absolute;
-    top: 0;
-    right: 70px;
+    padding: 0 10px;
     line-height: 40px;
     border-right: 1px solid black;
 }
 
 .buttons {
     border-right: 1px solid black;
-    position: absolute;
-    top: 0;
     line-height: 40px;
 }
 
-#settings {
-    right: 32.5px;
-}
-
-#exit {
-    right: 0px;
-}
 /************** Sub menu ****************/
 
 nav li ul {
@@ -118,7 +114,7 @@ label.toggleSubmenu {
 }
 
 nav label.toggleMenu {
-    background-color: gray;
+    background-color: #00BFFF;
     display: none;
     line-height: 40px;
     padding-left: 35px;
@@ -152,7 +148,8 @@ nav label.toggleMenu .fa {
     }
 
     nav {
-        overflow: hidden
+        overflow: hidden;
+        display: block;
     }
 
     nav ul {
@@ -187,7 +184,7 @@ nav label.toggleMenu .fa {
     }
 
     nav p a:hover {
-        background-color: gray;
+        background-color: #00BFFF;
     }
 
     nav label.toggleSubmenu {
@@ -219,5 +216,36 @@ nav label.toggleMenu .fa {
     nav input.toggleSubmenu:checked ~ label.toggleSubmenu .fa:before {
         content: "\f0d8";
         color: white;
+    }
+
+    .buttons {
+        position: absolute;
+        top: 0;
+    }
+    
+    #settings {
+        right: 32.5px;
+    }
+    
+    #exit {
+        right: 0px;
+    }
+
+    #user-name {
+        padding: 0 10px;
+        margin-left: -0.15px;
+        position: absolute;
+        top: 0;
+        right: 70px;
+    }
+
+    .logo-block {
+        display: none;
+    }
+}
+
+@media all and (max-width: 500px) {
+    #user-name {
+        font-size: 0.9em;
     }
 }

@@ -1,8 +1,10 @@
 #slider {
     max-width: 99.8%;
     position: relative;
-    margin: 0 auto;
     background-color: white;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #slides {
