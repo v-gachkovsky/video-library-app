@@ -17,6 +17,23 @@ function restoreSession() {
   }
 
   setAuthHeaders(auth.token, auth.email);
+
+  Axios.get('/user').then(({ data: { user } }) => {
+    const userNameField = document.getElementById('user-name');
+    let userName;
+
+    if (user.firstName && user.lastName) {
+      userName = `${user.firstName} ${user.lastName}`;
+    } else if (user.firstName && !user.lastName) {
+      userName = `${user.firstName}`;
+    } else {
+      userName = `${user.email}`;
+    }
+
+    userNameField.innerHTML = userName;
+  }).catch(error => {
+    console.log(error);
+  })
 }
 
 function setAuthHeaders(token, email) {

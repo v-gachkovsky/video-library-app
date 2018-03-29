@@ -1,5 +1,5 @@
 const submitButton = document.getElementById('submit-button');
-submitButton.addEventListener('click', (e) => {
+submitButton.addEventListener('click', e => {
   e.preventDefault();
 
   const firstName = document.getElementById('user-firstName').value;
@@ -10,14 +10,13 @@ submitButton.addEventListener('click', (e) => {
   if (email.trim().length === 0) return;
   if (password.trim().length < 6) return;
 
-  Axios.post('/signup', { 
+  Axios.post('/signup', {
       firstName,
       lastName,
       email,
-      password }).then(({ data: { success } }) => {
-      console.log('success', success)
+      password
+  }).then(({ data: { success } }) => {
     if (!success) return;
-
     location.replace('/signin.html');
   }).catch(error => {
     console.log('error', error);
