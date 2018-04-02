@@ -48,7 +48,28 @@
   }
 
   function makeVideosThumbnails() {
-    library.forEach(video => {
+    if (window.screen.width <= 800) {
+      library.forEach(video => {
+        const iframeVideo = document.createElement('iframe');
+        iframeVideo.src = `https://www.youtube.com/embed/${video.videoCode}`;
+        iframeVideo.allowFullscreen = true;
+        
+        iframeVideo.className = 'iframe-video';
+
+        const thumbnailTitle = document.createElement('h4');
+        thumbnailTitle.className = 'thumbnail-video-title';
+        thumbnailTitle.innerHTML = video.title;
+
+        const thumbnailContainer = document.createElement('div');
+        thumbnailContainer.className = 'thumbnail-video-container';
+
+        thumbnailContainer.appendChild(iframeVideo);
+        thumbnailContainer.appendChild(thumbnailTitle);
+
+        videoLibraryContainer.appendChild(thumbnailContainer);
+      });
+    } else {
+      library.forEach(video => {
       const thumbnail = document.createElement('img');
       thumbnail.src = `http://img.youtube.com/vi/${video.videoCode}/mqdefault.jpg`;
 
@@ -68,7 +89,8 @@
       thumbnailContainer.appendChild(thumbnailButton);
 
       videoLibraryContainer.appendChild(thumbnailContainer);
-    });
+      });
+    }
   }
 
   function showVideo(videoCode) {

@@ -44,6 +44,12 @@ main {
     width: 840px;
 }
 
+.iframe-video {
+    width: 320px;
+    height: 180px;
+    border: none;
+}
+
 @media all and (max-width: 1384px) {
     main {
         max-width: 1015px;
