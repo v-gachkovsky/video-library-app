@@ -3,39 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign In Page</title>
+    <link rel="stylesheet" href="styles/auth.css">
+    <link rel="stylesheet" href="styles/signup.css">
 </head>
 <body>
-    <h1>
-        Sign In
-    </h1>
+    <div class="body">
+        <div class="backgroun-img"></div>
+        <div class="auth">
+            <img src="img/logo2.png" alt="logo Pharmplanet">
+            <h1>
+                Регистрация
+            </h1>
 
-    <form>
-        <div>
-            <p>
-                Имя
-                <input id="user-firstName" type="text">
-            </p>
+            <form>
+                <div>
+                    <p>
+                        <input id="user-firstName" type="text" autocomplete="on" placeholder="Имя" class="input">
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <input id="user-lastName" type="text" autocomplete="on" placeholder="Фамилия" class="input">
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <input id="user-email" type="text" autocomplete="on" placeholder="E-mail" class="input">
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <input id="user-password" type="password" autocomplete="on" placeholder="Пароль" class="input">
+                    </p>
+                </div>
+                <button id="submit-button" type="submit" class="button">Зарегистрироваться</button>
+            </form>
+            <a href="signin.html" class="switch">Войти</a>
         </div>
-        <div>
-            <p>
-                Фамилия
-                <input id="user-lastName" type="text">
-            </p>
-        </div>
-        <div>
-            <p>
-                E-mail
-                <input id="user-email" type="text">
-            </p>
-        </div>
-        <div>
-            <p>
-                Пароль
-                <input id="user-password" type="password">
-            </p>
-        </div>
-        <input id="submit-button" type="submit">
-    </form>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
     <script src="scripts/auth.js"></script>

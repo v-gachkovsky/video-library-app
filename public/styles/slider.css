@@ -1,5 +1,5 @@
 #slider {
-    max-width: 99.8%;
+    width: 100%;
     position: relative;
     background-color: white;
     margin-top: 30px;
@@ -8,7 +8,7 @@
 }
 
 #slides {
-    max-width: auto;
+    max-width: 100%;
     margin: 0;
 }
 
