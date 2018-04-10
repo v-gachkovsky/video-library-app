@@ -2,22 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign In Page</title>
     <link rel="stylesheet" href="styles/auth.css">
     <link rel="stylesheet" href="styles/signin.css">
 </head>
 <body>
     <div class="body">
-        <div class="backgroun-img-800px"></div>  
-        <div id='vpart'>
-            <video autoplay="autoplay" loop='loop' muted id='bgvideo'>
-                <source src='videos/background-video-signin.mp4' type='video/mp4'></source>
-            </video>
+        <div class="backgroun-img">
+            <img src="img_for_signin_signup/bg.png">
         </div>
         <div class="auth">
-            <img src="img/logo2.png" alt="logo Pharmplanet">
             <h1>
-                Вход
+                Войти
             </h1>
 
             <form>
@@ -31,7 +28,7 @@
                         <input id="user-password" type="password" autocomplete="on" placeholder="Пароль" class="input">
                     </p>
                 </div>
-                <button id="submit-button" type="submit" class="button">Вход</button>
+                <button id="submit-button" type="submit" class="button">Вход<img class="right-arrow" src="img_for_signin_signup/right-arrow.png" alt=""></button>
             </form>
             <a href="signup.html" class="switch">Регистрация</a>
         </div>

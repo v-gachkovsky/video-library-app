@@ -1,20 +1,12 @@
-h1 {
-    margin-top: 75px;
+.auth {
+    height: 500px;
+    width: 400px;
 }
 
-.backgroun-img {
-    background-image: url(../img/nature.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
+@media all and (max-width: 400px) {
 
-@media all and (max-width: 800px) {
-    .backgroun-img {
-        background-image: url(../img/background-pharm.jpg);
+    .auth {
+        height: 410px;
+        width: 300px;
     }
 }  
