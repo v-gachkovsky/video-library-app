@@ -9,4 +9,8 @@
         height: 410px;
         width: 300px;
     }
+
+    .button {
+        font-size: 0.9em;
+    }
 }  
