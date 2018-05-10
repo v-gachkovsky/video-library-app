@@ -252,10 +252,7 @@ nav label.toggleMenu .fa {
     }
 
     .user-img {
-        position: absolute;
-        right: 195px;
-        top: 15px;
-        margin: 0px;
+        display: none;
     }
 
     #user-name {
