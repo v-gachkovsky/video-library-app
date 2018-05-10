@@ -17,19 +17,19 @@
     <header>
 
         <nav>
-            <div class="logo-block"><img src="img/logo2.png" alt="logo Pharmplanet"></div>
+            <div class="logo-block"><img src="img/logo.png" alt="logo Pharmplanet"></div>
             <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
             <label for="menu" class="toggleMenu"><i class="fa fa-bars"></i>Меню</label>
             <ul>
                 <li id="curses">
                     <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m1">
-                    <a href="#">Мои курсы</a>
+                    <a href="#" class="menu">Мои курсы</a>
                     <label for="sub_m1" class="toggleSubmenu"><i class="fa"></i></label>
                     <ul id="menu-courses"></ul>
                 </li>
                 <li id="ourResources">
                     <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
-                    <a href="#">Наши ресурсы</a>
+                    <a href="#" class="menu">Наши ресурсы</a>
                     <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
                     <ul>
                         <li><a href="http://www.pharmplanet.com.ua" target="_blank">Компания Фармпланета</a></li>
@@ -38,16 +38,16 @@
                     </ul>
                 </li>
             </ul>
+            <p class="user-img"><img src="img/user.png"></p>
             <p id="user-name"></p>
-            <p class="buttons" id="settings"><a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a></p>
-            <p class="buttons" id="exit"><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></p>
+            <p class="buttons" id="exit"><a href="#"><img src="img/logout.png">Выход</a></p>
         </nav>
 
         <div id="slider">
             <div id="slides"></div>
 
-            <div id="prev"><img src="img/arrowL.png" alt=""></div>
-            <div id="next"><img src="img/arrowR.png" alt=""></div>
+            <div id="prev"></div>
+            <div id="next"></div>
 
             <div id="dots" style="text-align:center"></div>
         </div>

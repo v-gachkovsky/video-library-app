@@ -1,16 +1,48 @@
 .auth {
-    height: 500px;
-    width: 400px;
+    height: 550px;
+    width: 375px;
+}
+
+#user-firstName {
+    background-image: url(../img_for_signin_signup/user.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 7px;
+}
+
+#user-lastName {
+    background-image: url(../img_for_signin_signup/user.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 7px;
+}
+
+#user-email {
+    background-image: url(../img_for_signin_signup/email.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 7px;
+}
+
+#user-password {
+    background-image: url(../img_for_signin_signup/lock.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 7px;
 }
 
 @media all and (max-width: 400px) {
 
     .auth {
-        height: 410px;
         width: 300px;
+        height: 430px;
     }
 
     .button {
-        font-size: 0.9em;
+        font-size: 0.8em;
+    }
+
+    .right-arrow {
+        margin-left: 15px;
     }
 }  

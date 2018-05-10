@@ -3,7 +3,7 @@
   const dots = [];
 
   const sliderField = document.getElementById("slider");
-  const duration = 4000;
+  const duration = 400000;
   const firstSlideIndex = 0;
   let lastSlideIndex = null;
 
@@ -16,11 +16,7 @@
 // Initial code for slider
   function init() {
     [
-      'img/gepanaze.jpg',
-      'img/immun44.jpg',
-      'img/gelometrol.jpg',
-      'img/sitoprostat.jpg',
-      'img/venoda.jpg'
+      'img/bg.png'
     ].forEach(function (imageSrc) {
       const img = document.createElement('img');
       img.src = imageSrc;

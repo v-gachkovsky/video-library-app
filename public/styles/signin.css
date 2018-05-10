@@ -1,6 +1,6 @@
 .auth {
-    height: 370px;
-    width: 380px;
+    height: 400px;
+    width: 375px;
 }
 
 #user-email {
@@ -17,14 +17,10 @@
     background-position-x: 7px;
 }
 
-#user-email:focus, #user-password:focus {
-    background-image: none;
-}
-
 @media all and (max-width: 400px) {
 
     .auth {
-        height: 350px;
         width: 300px;
+        height: 350px;
     }
 } 

@@ -1,7 +1,12 @@
 @font-face {
     font-family: "HelveticaLight";
     src: url("../fonts/HelveticaLight.ttf") format("truetype");
-  }
+}
+
+@font-face {
+    font-family: "HelveticaBold";
+    src: url("../fonts/HelveticaBold.ttf") format("truetype");
+}
 
 body {
     margin: 0px;
@@ -36,18 +41,19 @@ body {
     background-color: white;
     border-radius: 3.5px;
     position: absolute;
-    height: 480px;
-    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 100;
+    box-shadow: 0px 15px 25px -10px rgba(0,0,0,0.75);
 }
 
 h1 {
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 20px;
+    font-family: HelveticaBold;
+
 }
 
 form * {
@@ -61,52 +67,47 @@ form {
     align-items: center;
 }
 
-form > div {
-    margin: 5px;
-
-}
-
 .input {
     border-radius: 3.5px;
     border: #006d81 1.1px solid;
-    width: 230px;
-    height: 40px;
-    font-size: 0.8em;
+    width: 262px;
+    height: 55px;
+    font-size: 18px;
+    margin: 15px;
+    text-align: left;
+    padding-left: 38px;
 }
 
 .button {
+    text-transform: uppercase;
     color: white;
     border: none;
-    margin-top: 17px;
-    width: 232px;
-    height: 43px;
-    font-size: 1.1em;
+    margin-top: 20px;
+    width: 302px;
+    height: 55px;
+    font-size: 18px;
     background: #006d81;
     border-radius: 3.5px;
-    box-shadow: 0px 15px 35px -10px rgba(0,0,0,0.75);
 }
 
 .button:hover {
     background: #006d81;
+    box-shadow: 0px 15px 25px -12px rgba(0,0,0,0.5);
 }
 
 .button:active {
-    background: #006d81;
+    background: #005a69;
+    box-shadow: 0px 15px 25px -10px rgba(0,0,0,0.75);
 }
 
 .right-arrow {
-    margin-left: 10px;
-}
-
-p {
-    padding: 10px;
-    font-size: 1.3em;
+    margin-left: 20px;
 }
 
 .switch {
     color: #9a9a9a;
     margin-top: 20px;
-    font-size: 1.1em;
+    font-size: 14px;
     text-decoration: none;
 }
 
@@ -125,18 +126,15 @@ p {
     }
     
     .input {
-        border-radius: 3.5px;
-        border: #006d81 1.1px solid;
-        width: 190px;
-        height: 30px;
-        font-size: 0.6em;
+        width: 245px;
+        height: 35px;
+        font-size: 0.7em;
     }
     
     .button {
         margin-top: 17px;
-        width: 192px;
-        height: 33px;
+        width: 285px;
+        height: 35px;
         font-size: 1em;
-        box-shadow: 0px 15px 35px -10px rgba(0,0,0,0.75);
     }
 } 

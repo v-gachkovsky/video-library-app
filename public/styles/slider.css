@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     background-color: white;
-    margin-top: 30px;
+    margin-top: 0px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -21,26 +21,35 @@
 #prev, #next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    width: 60px;
-    height: 60px;
+    top: 0;
+    bottom: 0;
+    width: 68px;
+    height: 68px;
     transition-duration: 0.5s;
     border-radius: 50%;
-    margin: 0 7px;
+    margin: auto 7px;
+    background-position: center;
+}
+
+#prev {
+    background-image: url(../img/arrowLeft.png);
 }
 
 #next {
     right: 0;
+    background-image: url(../img/arrowRight.png);
 }
 
 #prev:hover {
     margin-left: 4px;
     transition-duration: 0.ss;
+    background-image: url(../img/arrowLeftBlue.png);
 }
 
 #next:hover {
     margin-right: 4px;
     transition-property: 0.5s;
+    background-image: url(../img/arrowRightBlue.png);
 }
 
 .dot {
@@ -73,4 +82,26 @@
 @keyframes fadein {
     from {opacity: 0.2;}
     to {opacity: 1;}
+}
+
+@media all and (max-width: 800px) {
+    #prev {
+        width: 34px;
+        height: 34px;
+        background-image: url(../img/arrowLeftS.png);
+    }
+    
+    #next {
+        width: 34px;
+        height: 34px;
+        background-image: url(../img/arrowRightS.png);
+    }
+    
+    #prev:hover {
+        background-image: url(../img/arrowLeftBlueS.png);
+    }
+    
+    #next:hover {
+        background-image: url(../img/arrowRightBlueS.png);
+    }
 }
